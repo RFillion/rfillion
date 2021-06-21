@@ -177,6 +177,8 @@ main, footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  padding-left: 10px;
+  background-color: #fff;
 }
 
 .hero .arrowText.remove {
