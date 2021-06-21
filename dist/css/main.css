@@ -12,17 +12,31 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  background: linear-gradient(to bottom right, #E4E4E4, #d1d1d1, #FFFFFF);
+  overflow-x: hidden;
+}
+
+main, footer {
+  background-color: white;
 }
 
 .bold {
   font-weight: bold;
 }
 
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 4px #111111;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
+  backdrop-filter: blur(10px);
   border: none;
   display: flex;
   justify-content: space-between;
@@ -139,12 +153,42 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 112px);
   width: 100%;
-  background: linear-gradient(to bottom right, #E4E4E4, #D2D2D2, #FFFFFF);
 }
 
 .hero img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+}
+
+.hero .text-hero {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.hero .arrowText {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero .arrowText p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero .arrowText img {
+  width: 20%;
+  height: 20%;
+  transform: translateX(27px);
+}
+
+.hero .arrowText a {
+  text-decoration: none;
+  color: #111111;
 }

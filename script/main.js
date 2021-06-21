@@ -17,8 +17,16 @@ menuItem.forEach(item => {
     })
 })
 
+//Animation
+let Arrow = document.getElementById('Animation');
+
+gsap.fromTo(Arrow, 
+    {y:0},
+    {y: 5, yoyo: true, repeat: -1, ease: 'power1.inOut'}
+);
+
 //ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 
 gsap.to('.header', {
     scrollTrigger: {
@@ -26,6 +34,6 @@ gsap.to('.header', {
         trigger: '.header',
         toggleActions: 'play none none reverse',
     },
-    backdropFilter: 'blur(10px)',
+    backdropFilter: 'blur(20px)',
     duration: 0.2,
-})
+});*/
