@@ -153,16 +153,4 @@ main, footer {background-color: white;}
         font-weight: 600;
         font-size: 1.2rem;
     }
-    .arrowText {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding-left: 10px;
-        background-color: #fff;
-        &.remove {display: none;}
-        p{margin: 0; font-weight: 700;}
-        img{width: 20%; height: 20%; transform: translateX(27px); }
-        a {text-decoration: none; color: #111111;}
-    }
 }

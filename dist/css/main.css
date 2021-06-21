@@ -171,32 +171,3 @@ main, footer {
   font-weight: 600;
   font-size: 1.2rem;
 }
-
-.hero .arrowText {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding-left: 10px;
-  background-color: #fff;
-}
-
-.hero .arrowText.remove {
-  display: none;
-}
-
-.hero .arrowText p {
-  margin: 0;
-  font-weight: 700;
-}
-
-.hero .arrowText img {
-  width: 20%;
-  height: 20%;
-  transform: translateX(27px);
-}
-
-.hero .arrowText a {
-  text-decoration: none;
-  color: #111111;
-}
