@@ -14,6 +14,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -47,7 +51,8 @@ body {
 .menu-btn .menu-btn-lines::before,
 .menu-btn .menu-btn-lines::after {
   width: 1.5rem;
-  height: 0.1rem;
+  height: 0.2rem;
+  border-radius: 50px;
   background-color: #111111;
   transition: all 200ms ease-in-out;
 }
