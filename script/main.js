@@ -2,10 +2,12 @@
 let menuBtn = document.querySelector('.menu-btn');
 let menuItems = document.querySelector('.menu-items');
 let menuItem = document.querySelectorAll('.menu-item');
+let VoirPlus = document.querySelector('.arrowText');
 
 menuBtn.addEventListener('click', () => {
     menuBtn.classList.toggle('open');
     menuItems.classList.toggle('open');
+    VoirPlus.classList.toggle('remove');
 });
 
 menuItem.forEach(item => {

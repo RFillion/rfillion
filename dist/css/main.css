@@ -8,12 +8,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to bottom right, #E4E4E4, #d1d1d1, #FFFFFF);
-  overflow-x: hidden;
 }
 
 main, footer {
@@ -58,7 +58,7 @@ main, footer {
   width: 1.5rem;
   height: 1.5rem;
   cursor: pointer;
-  z-index: 1;
+  z-index: 99;
 }
 
 .menu-btn .menu-btn-lines,
@@ -129,7 +129,9 @@ main, footer {
   .menu-items {
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     position: absolute;
+    padding-left: 0;
     top: 0;
     left: 0;
     right: 0;
@@ -161,8 +163,8 @@ main, footer {
 }
 
 .hero img {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
 }
 
 .hero .text-hero {
@@ -175,6 +177,10 @@ main, footer {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.hero .arrowText.remove {
+  display: none;
 }
 
 .hero .arrowText p {
