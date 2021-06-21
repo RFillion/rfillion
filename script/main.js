@@ -26,6 +26,6 @@ gsap.to('.header', {
         trigger: '.header',
         toggleActions: 'play none none reverse',
     },
-    backgroundColor: 'white',
+    backdropFilter: 'blur(10px)',
     duration: 0.2,
 })
