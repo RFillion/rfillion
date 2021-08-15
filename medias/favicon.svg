@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 625px;
+        fill: #0b5ed7;
+        text-anchor: middle;
+        font-family: Montserrat;
+        font-weight: 800;
+      }
+    </style>
+  </defs>
+  <text id="RF" class="cls-1" x="487.886" y="719.781"><tspan x="487.886">RF</tspan></text>
+</svg>
