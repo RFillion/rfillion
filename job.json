@@ -1,0 +1,40 @@
+{
+    "jobs" : [
+        {
+            "Titre" : "PosturAction",
+            "Image" : "medias/posturaction.png",
+            "Description" : "Mon deuxième stage de technique. J'étais invité à filmer et à monter les différentes vidéos de la plateforme PosturAction.",
+            "Lien" : "https://cliniqueinspiration.com/"
+        },
+        {
+            "Titre" : "ESBQ",
+            "Image" : "medias/ESBQ.PNG",
+            "Description" : "J'ai été invité à filmer et à produire la visite guidé de l'école Supérieure de Ballet du Québec. J'ai fait le montage par la suite.",
+            "Lien" : "https://vimeo.com/500879986"
+        },
+        {
+            "Titre" : "Cyberimpact",
+            "Image" : "medias/cyberimpact.PNG",
+            "Description" : "Mon premier stage de technique. J'étais stagiaire développeur et ma mission était de refaire leur Aide-En-Ligne.",
+            "Lien" : "https://faq.cyberimpact.com/fr"
+        },
+        {
+            "Titre" : "TWRP",
+            "Image" : "medias/twrp.PNG",
+            "Description" : "Nous avons été invité à créer un site web d'un groupe de musique de notre choix pendant notre cours d'optimisation web de 4e session.",
+            "Lien" : "https://twrp.online/twrp/index.html"
+        },
+        {
+            "Titre" : "Différent",
+            "Image" : "medias/différence.PNG",
+            "Description" : "Nous avons été invité à créer un mini court-métrage en 2D/3D pour notre cours d'Animation 3D de 4e session. Le tout a été fait dans Maya et After Effect.",
+            "Lien" : "https://youtu.be/TXJFPbp-53U"
+        },
+        {
+            "Titre" : "Pris dans le temps",
+            "Image" : "medias/Pris dans le temps.PNG",
+            "Description" : "Nous avons été invité à créer un court-métrage pour notre cours de montage vidéo de 3e session. Ce vidéo a été filmé dans son entiéreté avec un iPhone 11 Pro.",
+            "Lien" : "https://youtu.be/h1wUaInLrUc"
+        }
+    ]
+}

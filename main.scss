@@ -1,3 +1,8 @@
+$t: 1s;
+$d: 0.08em;
+$n: 3;
+$e: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
 *,
 *::before,
 *::after {
@@ -6,12 +11,24 @@
   margin: 0;
 }
 
+html {scroll-padding-top: 90px;}
+
 html,
 body {
   font-family: "Poppins", sans-serif;
-  background: #2a2a2a;
+  background: #1a1a1a;
   color: white;
 }
+
+::-webkit-scrollbar {width: 10px; transition: all 0.5s ease-in-out;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.2);}
+::-webkit-scrollbar-thumb {
+  background: #303030;
+  &:hover {
+    background-color: #363636;
+  }
+}
+
 
 .navbar {
   height: 80px;
@@ -22,6 +39,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 9;
+  transition: all 150ms ease-in-out;
 
   .navbar__container {
     display: flex;
@@ -43,12 +61,13 @@ body {
     .navbar__toggle {
       transform-origin: center;
       cursor: pointer;
-      transition: all 150ms ease-in-out;
-      &:hover {
-        transform: rotate(45deg);
-      }
       .ri-grid-fill {
         color: white;
+        transition: all 150ms ease-in-out;
+        &:hover {
+        color:  #0b5ed7;
+        transform: rotate(45deg);
+      }
       }
     }
   }
@@ -62,10 +81,11 @@ body {
   width: 90vw;
   max-width: 750px;
   height: 95vh;
-  background: white;
+  background: #1b1b1b;
   opacity: 0;
   transition: all 150ms ease-in-out;
   pointer-events: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.49);
   z-index: 99;
 
   .close {
@@ -73,8 +93,14 @@ body {
     top: 30px;
     right: 30px;
     .ri-close-line {
+      color: white;
       cursor: pointer;
       font-size: 3rem;
+      transition: all 150ms ease-in-out;
+
+      &:hover {
+        color: #0b5ed7;
+      }
     }
   }
 
@@ -90,8 +116,29 @@ body {
       font-size: 2rem;
       margin: 1rem 0;
       a {
-        color: #2a2a2a;
+        color: white;
         text-decoration: none;
+        position: relative;
+        transition: all 150ms ease-in-out;
+
+        &:hover {color: #0b5ed7}
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.1em;
+          background-color: #0b5ed7;
+          opacity: 0;
+          transition: opacity 300ms, transform 300ms;
+        }
+
+        &:hover::after, &:focus::after {
+          opacity: 1;
+          transform: translate3d(0, 0.2em, 0);
+        }
       }
     }
   }
@@ -100,6 +147,7 @@ body {
 .hero {
   width: 100%;
   height: 100vh;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,16 +156,42 @@ body {
     font-size: 4rem;
     font-weight: bold;
     color: white;
+
+    @keyframes popUp {
+      0%, 30% {
+        transform: translate3d(0,0,0);
+        text-shadow: 0 0 0 #303030;
+        color: white;
+      }
+      70%, 100% {
+        transform: translate3d($d, -$d, 0);
+        text-shadow: -$d $d #303030;
+        color: white;
+      }
+    }
+    span {
+      position: relative;
+      display: inline-block;
+      animation: popUp $t infinite alternate $e;
+      @for $i from 1 through $n {
+        &:nth-last-child(#{$i}n){animation-delay: -$t*$i/$n/2;}
+      }
+    }
   }
   .arrow {
     position: absolute;
     bottom: 10vh;
-    color: white;
     font-size: 3rem;
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 }
 
-section {margin: 2rem 0;}
+section {
+  margin-bottom: 6rem;
+}
 
 #propos {
   .container {
@@ -130,12 +204,39 @@ section {margin: 2rem 0;}
 }
 
 #projets {
-  color: #2a2a2a;
-  background: white;
-  
+  margin-bottom: 2.5rem;
+  .title {padding: 2rem 0 0 1rem;}
+  .card {
+    background-color: #1e1e1e;
+    margin: 2rem 1rem;
+    border: none;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+    .btn.btn-primary {width: 100%}
+  }
+}
+
+#contact {
+  margin-bottom: 1rem;
+  h1 {margin-bottom: 2rem;}
+  .RS {
+    font-size: 2rem;
+
+    a {text-decoration: none; color: white;}
+  }
+}
+
+.footer {
+  font-size: 1rem;
+  color: #303030;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 767px) {
+  html {scroll-padding-top: 90px;}
   #propos {
     .container {
       img {
@@ -143,6 +244,14 @@ section {margin: 2rem 0;}
         height: auto;
         transform: rotate(0deg);
       }
+    }
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .hero {
+    .welcome {
+      font-size: 8rem;
     }
   }
 }
