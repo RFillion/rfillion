@@ -1,41 +1,27 @@
-//hamburger menu
-let menuBtn = document.querySelector('.menu-btn');
-let menuItems = document.querySelector('.menu-items');
-let menuItem = document.querySelectorAll('.menu-item');
-let VoirPlus = document.querySelector('.arrowText');
+gsap.registerPlugin(ScrollTrigger);
 
-menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('open');
-    menuItems.classList.toggle('open');
-    VoirPlus.classList.toggle('remove');
+let Menu = document.getElementById('mobile-menu');
+let Close = document.querySelector('.close');
+let NavMenu = document.querySelector('.navbar__menu');
+let links = document.querySelectorAll('.link');
+let arrow = document.querySelector('.arrow');
+
+Menu.addEventListener('click', () => {
+    NavMenu.style.opacity = '1';
+    NavMenu.style.pointerEvents = 'all';
 });
 
-menuItem.forEach(item => {
-    item.addEventListener('click', () => {
-        if(menuBtn.classList.contains('open')) {
-            menuBtn.classList.toggle('open');
-            menuItems.classList.toggle('open');
-        }
-    })
-})
+Close.addEventListener('click', () => {
+    NavMenu.style.opacity = '0';
+    NavMenu.style.pointerEvents = 'none';
+});
 
-//Animation
-let Arrow = document.getElementById('Animation');
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        NavMenu.style.opacity = '0';
+        NavMenu.style.pointerEvents = 'none';
+    });
+});
 
-gsap.fromTo(Arrow, 
-    {y:0},
-    {y: 5, yoyo: true, repeat: -1, ease: 'power1.inOut'}
-);
-
-//ScrollTrigger
-/*gsap.registerPlugin(ScrollTrigger);
-
-gsap.to('.header', {
-    scrollTrigger: {
-        start: 'top',
-        trigger: '.header',
-        toggleActions: 'play none none reverse',
-    },
-    backdropFilter: 'blur(20px)',
-    duration: 0.2,
-});*/
+gsap.timeline().to(arrow, 
+    {y: 20, ease: 'back.in', yoyo: true, repeat: -1});
