@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;700;800;900&display=swap" rel="stylesheet">
   <link rel="icon" href="medias/favicon.svg" type="image/svg" sizes="16x16" />
+  <link rel="stylesheet" href="dist/css/blobz.css">;
   <link rel="stylesheet" href="dist/css/main.css" />
   <title>Bienvenue</title>
 </head>
@@ -18,7 +19,7 @@
   <header>
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="/" id="navbar__logo"> RFillion </a>
+        <a href="/" id="navbar__logo"><span>RFillion</span></a>
         <div class="navbar__toggle" id="mobile-menu">
           <i class="ri-grid-fill"></i>
         </div>
@@ -33,10 +34,10 @@
             <a href="/">Accueil</a>
           </li>
           <li class="navbar__links">
-            <a href="#propos" class="link">À propos</a>
+            <a href="#propos" class="link">À&nbsp;propos</a>
           </li>
           <li class="navbar__links">
-            <a href="#projets" class="link">projets</a>
+            <a href="#projets" class="link">Projets</a>
           </li>
           <li class="navbar__links">
             <a href="#contact" class="link">Contact</a>
@@ -60,6 +61,11 @@
       </div>
     </div>
     <section id="propos">
+      <div class="tk-blob" style="--fill: #0b5ed7; --amount: 8; --time: 10s;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.4 374.7">
+          <path d="M309.9 70.6c37.8 52.7 39.8 128.7 15.4 184.1-24.3 55.4-75 90.1-125.4 107.4-50.4 17.4-100.4 17.4-136.2-3.3-35.7-20.7-57.2-62-62.4-102.1-5.2-40.2 5.8-79 29.1-128.3C53.6 79.1 89.1 19.3 143.7 4.1 198.3-11.2 272 18 309.9 70.6z"></path>
+        </svg>
+      </div>
       <div class="container">
         <div class="row ">
           <div class="d-flex justify-content-center col-12 col-md-8">
@@ -94,11 +100,14 @@
     </section>
     <section id="contact">
       <div class="container">
-        <div class="row text-center text-sm-start">
-          <div class="col-12 col-sm-8">
+        <div class="row text-center text-md-start">
+          <div class="col-sm-12 col-md-6">
             <h1>Contactez-moi!</h1>
           </div>
-          <div class="col-12 col-sm-4 RS">
+          <div class="col-sm-12 col-md-3 CV">
+            <a href="cv/CV_PDF.pdf" target="_blank">CV</a>
+          </div>
+          <div class="col-sm-12 col-md-3 RS">
             <div class="row">
               <div class="col-3">
                 <a href="https://www.facebook.com/raph.fillion/" target="_blank"><i class="ri-facebook-box-fill"></i></a>

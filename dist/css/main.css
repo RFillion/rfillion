@@ -15,6 +15,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: #1a1a1a;
   color: white;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -51,7 +52,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 80px;
-  z-index: 1;
+  z-index: 10;
   width: 100%;
   margin: 0 auto;
   padding: 0 50px;
@@ -62,6 +63,11 @@ body {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.navbar .navbar__container #navbar__logo:hover {
+  color: #0b5ed7;
 }
 
 .navbar .navbar__container .navbar__toggle {
@@ -81,11 +87,11 @@ body {
 
 .navbar__menu {
   position: fixed;
-  top: 50%;
+  top: 80px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   width: 95vw;
-  height: 95vh;
+  height: 20vh;
   background: #1b1b1b;
   opacity: 0;
   transition: all 150ms ease-in-out;
@@ -96,14 +102,14 @@ body {
 
 .navbar__menu .close {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 10px;
+  right: 25px;
 }
 
 .navbar__menu .close .ri-close-line {
   color: white;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
   transition: all 150ms ease-in-out;
 }
 
@@ -113,21 +119,20 @@ body {
 
 .navbar__menu .navbar__item {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0;
   list-style-type: none;
 }
 
 .navbar__menu .navbar__item .navbar__links {
-  font-size: 2rem;
   margin: 1rem 0;
+  margin-right: 1rem;
 }
 
 .navbar__menu .navbar__item .navbar__links a {
   color: white;
+  font-size: 1rem;
   text-decoration: none;
   position: relative;
   transition: all 150ms ease-in-out;
@@ -215,6 +220,23 @@ section {
   margin-bottom: 6rem;
 }
 
+#propos {
+  position: relative;
+}
+
+#propos .tk-blob {
+  position: absolute;
+  top: -20px;
+  left: 5vw;
+  width: 500px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+#propos .container .row {
+  z-index: 2;
+}
+
 #propos .container img {
   width: 100%;
   transform: rotate(4deg);
@@ -253,6 +275,18 @@ section {
   margin-bottom: 2rem;
 }
 
+#contact .CV a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: all 150ms ease-in-out;
+}
+
+#contact .CV a:hover {
+  color: #0b5ed7;
+}
+
 #contact .RS {
   font-size: 2rem;
 }
@@ -260,6 +294,11 @@ section {
 #contact .RS a {
   text-decoration: none;
   color: white;
+  transition: all 150ms ease-in-out;
+}
+
+#contact .RS a:hover {
+  color: #0b5ed7;
 }
 
 .footer {
@@ -270,7 +309,7 @@ section {
 
 @media screen and (max-width: 767px) {
   html {
-    scroll-padding-top: 90px;
+    scroll-padding-top: 120px;
   }
   #propos .container img {
     width: 50%;
@@ -280,7 +319,51 @@ section {
 }
 
 @media screen and (min-width: 767px) {
+  .navbar__item {
+    justify-content: space-around !important;
+  }
+  .navbar__item .navbar__links {
+    margin-left: 1.5rem !important;
+  }
+  .navbar__item .navbar__links a {
+    font-size: 1.5rem !important;
+  }
   .hero .welcome {
     font-size: 8rem;
+  }
+  .tk-blob {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 400px !important;
+    overflow: hidden;
+    z-index: 0;
+  }
+}
+
+@media screen and (min-width: 982px) {
+  .tk-blob {
+    top: 10px !important;
+    left: 10% !important;
+  }
+}
+
+@media screen and (min-width: 1190px) {
+  .tk-blob {
+    top: 30px !important;
+    left: 30px !important;
+    width: 500px !important;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .tk-blob {
+    left: 10vw !important;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .tk-blob {
+    left: 20vw !important;
   }
 }
