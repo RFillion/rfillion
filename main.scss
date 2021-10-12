@@ -233,15 +233,8 @@ section {
 #contact {
   margin-bottom: 1rem;
   h1 {margin-bottom: 2rem;}
-  .CV {
-    a {
-      text-decoration: none;
-      color: white;
-      font-size: 1.5rem;
-      font-weight: bold;
-      transition: all 150ms ease-in-out;
-      &:hover {color: #0b5ed7}
-    }
+  .direction {
+    font-size: 1.5rem;
   }
   .RS {
     font-size: 2rem;
@@ -254,6 +247,21 @@ section {
         color: #0b5ed7;
       }
     }
+  }
+}
+
+#cv {
+  text-align: center;
+  background: #242424;
+  padding: 2rem;
+  margin-bottom: 50px;
+
+  .papers a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: all 150ms ease-in-out;
+    &:hover {color: #0b5ed7}
   }
 }
 

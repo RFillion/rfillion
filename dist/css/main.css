@@ -275,16 +275,8 @@ section {
   margin-bottom: 2rem;
 }
 
-#contact .CV a {
-  text-decoration: none;
-  color: white;
+#contact .direction {
   font-size: 1.5rem;
-  font-weight: bold;
-  transition: all 150ms ease-in-out;
-}
-
-#contact .CV a:hover {
-  color: #0b5ed7;
 }
 
 #contact .RS {
@@ -298,6 +290,24 @@ section {
 }
 
 #contact .RS a:hover {
+  color: #0b5ed7;
+}
+
+#cv {
+  text-align: center;
+  background: #242424;
+  padding: 2rem;
+  margin-bottom: 50px;
+}
+
+#cv .papers a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 150ms ease-in-out;
+}
+
+#cv .papers a:hover {
   color: #0b5ed7;
 }
 
