@@ -49,10 +49,12 @@ function creerCarte(Info) {
     Info.jobs.forEach(job => {
         let titre = job.Titre;
         let image = job.Image;
-        let description = job.Description;
+        let description = job.DescriptionMin;
         let lien = job.Lien;
+        let Cards = document.querySelectorAll('#carte');
 
-        html += `<div class="col-12 col-lg-6">
+
+        html += `<div class="col-12 col-lg-6" id="carte">
             <div class="card">
               <img src="${image}" alt="" class="card-img-top">
               <div class="card-body">
@@ -64,5 +66,13 @@ function creerCarte(Info) {
           </div>`;
 
           document.querySelector('.cartes').innerHTML = html;
+
+          Cards.forEach(Card => {
+            Card.addEventListener('click', () => {
+                console.log('click');
+            });
+          });
     });
 }
+
+
