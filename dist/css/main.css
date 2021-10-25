@@ -317,6 +317,14 @@ section {
   margin-bottom: 1rem;
 }
 
+.modal-content {
+  background: #303030 !important;
+}
+
+.modal-content .modal-body img {
+  width: 100%;
+}
+
 @media screen and (max-width: 767px) {
   html {
     scroll-padding-top: 120px;

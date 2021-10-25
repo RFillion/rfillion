@@ -2,38 +2,56 @@
     "jobs" : [
         {
             "Titre" : "PosturAction",
+            "id" : "Posture",
+            "target" : "#Posture",
             "Image" : "medias/posturaction.png",
             "DescriptionMin" : "Mon deuxième stage de technique. J'étais invité à filmer et à monter les différentes vidéos de la plateforme PosturAction.",
+            "Description" : "Ce stage était beaucoup axé sur la vidéo. J'étais donc chargé à trouver l'équipement nécessaire pour la production vidéo, trouver une façon de faire du montage en temps réelle pour diminuer le Post-Production, et faire le montage finale en ajoutant le logo et ajusté le son.",
             "Lien" : "https://cliniqueinspiration.com/"
         },
         {
             "Titre" : "ESBQ",
+            "id" : "ESBQ",
+            "target" : "#ESBQ",
             "Image" : "medias/ESBQ.PNG",
             "DescriptionMin" : "J'ai été invité à filmer et à produire la visite guidé de l'école Supérieure de Ballet du Québec. J'ai fait le montage par la suite.",
+            "Description" : "Un projet qui m'a été proposé par une professeure. Le projet consistait a filmer et monter la visite guidé pour l'École Supérieure de Ballet du Québec. J'ai utilisé un Sony A6500 avec un stabilisateur DJI pour la visite.",
             "Lien" : "https://vimeo.com/500879986"
         },
         {
             "Titre" : "Cyberimpact",
+            "id" : "Cyberimpact",
+            "target" : "#Cyberimpact",
             "Image" : "medias/cyberimpact.PNG",
             "DescriptionMin" : "Mon premier stage de technique. J'étais stagiaire développeur et ma mission était de refaire leur Aide-En-Ligne.",
+            "Description" : "Ce premier stage était axé sur le développement Front-End. ",
             "Lien" : "https://faq.cyberimpact.com/fr"
         },
         {
             "Titre" : "TWRP",
+            "id" : "TWRP",
+            "target" : "#TWRP",
             "Image" : "medias/twrp.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un site web d'un groupe de musique de notre choix pendant notre cours d'optimisation web de 4e session.",
+            "Description" : "Grosse description",
             "Lien" : "https://twrp.online/twrp/index.html"
         },
         {
             "Titre" : "Différent",
+            "id" : "Different",
+            "target" : "#Different",
             "Image" : "medias/différence.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un mini court-métrage en 2D/3D pour notre cours d'Animation 3D de 4e session. Le tout a été fait dans Maya et After Effect.",
+            "Description" : "Grosse description",
             "Lien" : "https://youtu.be/TXJFPbp-53U"
         },
         {
             "Titre" : "Pris dans le temps",
+            "id" : "PrisDansLeTemps",
+            "target" : "#PrisDansLeTemps",
             "Image" : "medias/Pris dans le temps.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un court-métrage pour notre cours de montage vidéo de 3e session. Ce vidéo a été filmé dans son entièreté avec un iPhone 11 Pro.",
+            "Description" : "Grosse description",
             "Lien" : "https://youtu.be/h1wUaInLrUc"
         }
     ]

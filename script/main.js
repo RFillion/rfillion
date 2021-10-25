@@ -41,37 +41,50 @@ window.onscroll = () => {
 //Cartes
 fetch("job.json")
 .then(response => response.json())
-.then(result => {creerCarte(result)});
+.then(result => {Cards(result)});
 
-function creerCarte(Info) {
-    let html = '';
+function Cards(Info) {
+    let htmlCartes = '';
+    let htmlModal = '';
 
     Info.jobs.forEach(job => {
         let titre = job.Titre;
+        let target = job.target;
+        let id = job.id;
         let image = job.Image;
-        let description = job.DescriptionMin;
+        let descriptionMin = job.DescriptionMin;
+        let description = job.Description;
         let lien = job.Lien;
-        let Cards = document.querySelectorAll('#carte');
+        let footer = document.querySelector(".footerTag");
 
-
-        html += `<div class="col-12 col-lg-6" id="carte">
+        htmlCartes += `<div class="col-12 col-lg-6 carte">
             <div class="card">
               <img src="${image}" alt="" class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">${titre}</h5>
-                <p class="card-text">${description}</p>
-                <a href="${lien}" target="_blank" class="btn btn-primary">Accéder</a>
+                <p class="card-text">${descriptionMin}</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="${target}">En voir plus</button>
               </div>
             </div>
           </div>`;
+          document.querySelector('.cartes').innerHTML = htmlCartes;
 
-          document.querySelector('.cartes').innerHTML = html;
+          htmlModal += `<div class="modal fade" id="${id}" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="${id}">${titre}</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="${image}">
+                <p>${description}</p>
+              </div>
+            </div>
+          </div>
+        </div>`;
 
-          Cards.forEach(Card => {
-            Card.addEventListener('click', () => {
-                console.log('click');
-            });
-          });
+        footer.insertAdjacentHTML('afterend', htmlModal);
     });
 }
 
