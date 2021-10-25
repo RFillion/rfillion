@@ -80,6 +80,9 @@ function Cards(Info) {
                 <img src="${image}">
                 <p>${description}</p>
               </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-primary"><a href="${lien}">Voir le projet</a></button>
+              </div>
             </div>
           </div>
         </div>`;

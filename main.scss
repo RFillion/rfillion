@@ -273,9 +273,16 @@ section {
 
 .modal {
   &-content {
-    background: #303030 !important;
+    background: #1e1e1e !important;
     .modal-body {
       img {width: 100%}
+      p {padding: 1em 0}
+    }
+    .modal-footer{
+      a {
+        text-decoration: none;
+        
+      }
     }
   }
 }

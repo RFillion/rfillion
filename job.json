@@ -24,7 +24,7 @@
             "target" : "#Cyberimpact",
             "Image" : "medias/cyberimpact.PNG",
             "DescriptionMin" : "Mon premier stage de technique. J'étais stagiaire développeur et ma mission était de refaire leur Aide-En-Ligne.",
-            "Description" : "Ce premier stage était axé sur le développement Front-End. ",
+            "Description" : "Ce premier stage était axé sur le développement Front-End. En premier temps j'étais chargé de faire la refonte de leur Aide-en-ligne pour leur logiciel d'infolettre grâce aux technologies HTML/CSS/Javascript. J'ai été aussi demandé de faire une maquette du site web Admin pour Cyberimpact.",
             "Lien" : "https://faq.cyberimpact.com/fr"
         },
         {
@@ -33,7 +33,7 @@
             "target" : "#TWRP",
             "Image" : "medias/twrp.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un site web d'un groupe de musique de notre choix pendant notre cours d'optimisation web de 4e session.",
-            "Description" : "Grosse description",
+            "Description" : "Ce projet de session a été réalisé en groupe de 2. Le projet en temps que tel était de réaliser un site web promotionnel pour un groupe de musique qu'on a choisi. Nous avons choisi le groupe TWRP, qui est un groupe Canadien. Les technologies HTML/CSS/Javascript ont été utilisé, ainsi que la librairie GSAP et Wordpress pour le questionnaire.",
             "Lien" : "https://twrp.online/twrp/index.html"
         },
         {
@@ -42,7 +42,7 @@
             "target" : "#Different",
             "Image" : "medias/différence.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un mini court-métrage en 2D/3D pour notre cours d'Animation 3D de 4e session. Le tout a été fait dans Maya et After Effect.",
-            "Description" : "Grosse description",
+            "Description" : "Dans le cours d'animation 3D, nous devions créés un court-métrage majoritairement en 3D. Tous les éléments dans le vidéo (sauf le personnage principal) ont été créé dans le logiciel Maya. L'animation du personnage principal a été fait dans After Effect. J'étais chargé à faire l'animation du bonhomme ainsi que le mise en place des scènes au complet.",
             "Lien" : "https://youtu.be/TXJFPbp-53U"
         },
         {
@@ -51,7 +51,7 @@
             "target" : "#PrisDansLeTemps",
             "Image" : "medias/Pris dans le temps.PNG",
             "DescriptionMin" : "Nous avons été invité à créer un court-métrage pour notre cours de montage vidéo de 3e session. Ce vidéo a été filmé dans son entièreté avec un iPhone 11 Pro.",
-            "Description" : "Grosse description",
+            "Description" : "Dans le cours de montage vidéo, nous devions faire un court-métrage avec un narrateur. Moi et mon coéquipier avons décidé de faire notre court-métrage sur une personne qui se remémore de son enfance grâce au jeu de Sonic. Le tout a été réalisé sur un iPhone 11 Pro.",
             "Lien" : "https://youtu.be/h1wUaInLrUc"
         }
     ]
