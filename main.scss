@@ -276,14 +276,14 @@ section {
     background: #1e1e1e !important;
     .modal-body {
       img {width: 100%}
-      p {padding: 1em 0}
+      p {padding-top: 1.5em}
     }
-    .modal-footer{
+      .btn{width: 100%;
+      }
       a {
         text-decoration: none;
-        
+        color: white;
       }
-    }
   }
 }
 

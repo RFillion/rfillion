@@ -318,11 +318,24 @@ section {
 }
 
 .modal-content {
-  background: #303030 !important;
+  background: #1e1e1e !important;
 }
 
 .modal-content .modal-body img {
   width: 100%;
+}
+
+.modal-content .modal-body p {
+  padding-top: 1.5em;
+}
+
+.modal-content .btn {
+  width: 100%;
+}
+
+.modal-content a {
+  text-decoration: none;
+  color: white;
 }
 
 @media screen and (max-width: 767px) {
