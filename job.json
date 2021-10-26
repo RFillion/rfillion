@@ -1,7 +1,7 @@
 {
     "jobs" : [
         {
-            "Titre" : "La course de la jungle",
+            "Titre" : "La Course de la Jungle",
             "id" : "jungle",
             "target" : "#jungle",
             "Image" : "medias/courseJungle.png",
