@@ -6,7 +6,8 @@
             "target" : "#jungle",
             "Image" : "medias/courseJungle.png",
             "Description" : "Dans le cours de Réalité Virtuelle, nous devions faire un jeu minimal en 2D. J'ai utilisé le logiciel Unity. Les assets ont tous été créés par moi.",
-            "Lien" : "/game/index.html"
+            "Lien" : "/partials/error.html"
+
         },
         {
             "Titre" : "PosturAction",

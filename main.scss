@@ -3,6 +3,17 @@ $d: 0.08em;
 $n: 3;
 $e: cubic-bezier(0.860, 0.000, 0.070, 1.000);
 
+//page error
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; height: 100vh;
+  .error {
+    text-align: center;
+  }
+}
+
 *,
 *::before,
 *::after {
