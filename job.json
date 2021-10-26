@@ -1,13 +1,20 @@
 {
     "jobs" : [
         {
+            "Titre" : "Équiterre (en cours)",
+            "id" : "equiterre",
+            "target" : "#equiterre",
+            "Image" : "medias/equiterre.png",
+            "Description" : "Dans le cours de Projet Web, nous étions invité à faire la refonte complète d'une OBNL. Notre équipe était chargé de faire celle d'Équiterre. La majorité du site utilise Wordpress en HTML/SCSS/Javascript ainsi que du PHP. La maquette graphique ainsi qu'une grande partie du site web a été créé par moi-même.",
+            "Lien" : "/partials/error.html"
+        },
+        {
             "Titre" : "La Course de la Jungle",
             "id" : "jungle",
             "target" : "#jungle",
             "Image" : "medias/courseJungle.png",
             "Description" : "Dans le cours de Réalité Virtuelle, nous devions faire un jeu minimal en 2D. J'ai utilisé le logiciel Unity. Les assets ont tous été créés par moi.",
             "Lien" : "/partials/error.html"
-
         },
         {
             "Titre" : "PosturAction",
