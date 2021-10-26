@@ -11,7 +11,7 @@ $e: cubic-bezier(0.860, 0.000, 0.070, 1.000);
   margin: 0;
 }
 
-html {scroll-padding-top: 90px;}
+html {scroll-padding-top: 200px;}
 
 html,
 body {
@@ -191,12 +191,11 @@ body {
   }
 }
 
-section {
-  margin-bottom: 6rem;
-}
+
 
 #propos {
   position: relative;
+  margin-bottom: 20vh;
   .tk-blob {
     position: absolute;
     top: -20px; left: 5vw;
@@ -276,14 +275,10 @@ section {
     background: #1e1e1e !important;
     .modal-body {
       img {width: 100%}
-      p {padding-top: 1.5em}
+      h3 {margin: 1.5rem 0 0.5rem 0; font-weight: 700; }
     }
-      .btn{width: 100%;
-      }
-      a {
-        text-decoration: none;
-        color: white;
-      }
+      .btn{width: 100%;}
+      a {text-decoration: none;color: white;}
   }
 }
 

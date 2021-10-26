@@ -7,7 +7,7 @@
 }
 
 html {
-  scroll-padding-top: 90px;
+  scroll-padding-top: 200px;
 }
 
 html,
@@ -216,12 +216,9 @@ body {
   color: white;
 }
 
-section {
-  margin-bottom: 6rem;
-}
-
 #propos {
   position: relative;
+  margin-bottom: 20vh;
 }
 
 #propos .tk-blob {
@@ -325,8 +322,9 @@ section {
   width: 100%;
 }
 
-.modal-content .modal-body p {
-  padding-top: 1.5em;
+.modal-content .modal-body h3 {
+  margin: 1.5rem 0 0.5rem 0;
+  font-weight: 700;
 }
 
 .modal-content .btn {

@@ -52,41 +52,36 @@ function Cards(Info) {
         let target = job.target;
         let id = job.id;
         let image = job.Image;
-        let descriptionMin = job.DescriptionMin;
         let description = job.Description;
         let lien = job.Lien;
         let footer = document.querySelector(".footerTag");
 
         htmlCartes += `<div class="col-12 col-lg-6 carte">
             <div class="card">
-              <img src="${image}" alt="" class="card-img-top">
+              <img src="${image}" class="card-img-top">
               <div class="card-body">
-                <h5 class="card-title">${titre}</h5>
-                <p class="card-text">${descriptionMin}</p>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="${target}">En voir plus</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="${target}">${titre}</button>
               </div>
             </div>
           </div>`;
           document.querySelector('.cartes').innerHTML = htmlCartes;
 
           htmlModal += `<div class="modal fade" id="${id}" tabindex="-1">
-          <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="${id}">${titre}</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
               <div class="modal-body">
                 <img src="${image}">
+                <h3 class="modal-title" id="${id}">${titre}</h3>
                 <p>${description}</p>
                 <button type="button" class="btn btn-primary"><a href="${lien}" target="_blank">Voir le projet</a></button>
               </div>
             </div>
           </div>
         </div>`;
-
         footer.insertAdjacentHTML('afterend', htmlModal);
     });
 }
+
+
 
 
