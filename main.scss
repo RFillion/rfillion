@@ -1,7 +1,7 @@
-$t: 1s;
+$t: 1.2s;
 $d: 0.08em;
-$n: 3;
-$e: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$n: 16;
+$e: cubic-bezier(0.100, 0.800, 0.020, 3.500);
 
 //page error
 .flex {
@@ -51,7 +51,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 9;
-  transition: all 150ms ease-in-out;
+  transition: all 150ms ease;
 
   .navbar__container {
     display: flex;
@@ -145,12 +145,12 @@ body {
           height: 0.1em;
           background-color: #0b5ed7;
           opacity: 0;
-          transition: opacity 300ms, transform 300ms;
+          transition: opacity 150ms, transform 150ms;
         }
         
         &:hover::after, &:focus::after {
           opacity: 1;
-          transform: translate3d(0, 0.2em, 0);
+          transform: translate3d(0, 0.4em, 0);
         }
       }
     }
@@ -178,7 +178,7 @@ body {
       }
       70%, 100% {
         transform: translate3d($d, -$d, 0);
-        text-shadow: -$d $d #303030;
+        text-shadow: -$d $d #0b5ed7;
         color: white;
       }
     }
@@ -198,6 +198,8 @@ body {
     a {
       text-decoration: none;
       color: white;
+      transition: all 150ms ease;
+      &:hover {color: #0b5ed7}
     }
   }
 }

@@ -56,7 +56,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 9;
-  transition: all 150ms ease-in-out;
+  transition: all 150ms ease;
 }
 
 .navbar .navbar__container {
@@ -163,12 +163,12 @@ body {
   height: 0.1em;
   background-color: #0b5ed7;
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 150ms, transform 150ms;
 }
 
 .navbar__menu .navbar__item .navbar__links a:hover::after, .navbar__menu .navbar__item .navbar__links a:focus::after {
   opacity: 1;
-  transform: translate3d(0, 0.2em, 0);
+  transform: translate3d(0, 0.4em, 0);
 }
 
 .hero {
@@ -194,7 +194,7 @@ body {
   }
   70%, 100% {
     transform: translate3d(0.08em, -0.08em, 0);
-    text-shadow: -0.08em 0.08em #303030;
+    text-shadow: -0.08em 0.08em #0b5ed7;
     color: white;
   }
 }
@@ -202,19 +202,71 @@ body {
 .hero .welcome span {
   position: relative;
   display: inline-block;
-  animation: popUp 1s infinite alternate cubic-bezier(0.86, 0, 0.07, 1);
+  animation: popUp 1.2s infinite alternate cubic-bezier(0.1, 0.8, 0.02, 3.5);
 }
 
 .hero .welcome span:nth-last-child(1n) {
-  animation-delay: -0.16667s;
+  animation-delay: -0.0375s;
 }
 
 .hero .welcome span:nth-last-child(2n) {
-  animation-delay: -0.33333s;
+  animation-delay: -0.075s;
 }
 
 .hero .welcome span:nth-last-child(3n) {
-  animation-delay: -0.5s;
+  animation-delay: -0.1125s;
+}
+
+.hero .welcome span:nth-last-child(4n) {
+  animation-delay: -0.15s;
+}
+
+.hero .welcome span:nth-last-child(5n) {
+  animation-delay: -0.1875s;
+}
+
+.hero .welcome span:nth-last-child(6n) {
+  animation-delay: -0.225s;
+}
+
+.hero .welcome span:nth-last-child(7n) {
+  animation-delay: -0.2625s;
+}
+
+.hero .welcome span:nth-last-child(8n) {
+  animation-delay: -0.3s;
+}
+
+.hero .welcome span:nth-last-child(9n) {
+  animation-delay: -0.3375s;
+}
+
+.hero .welcome span:nth-last-child(10n) {
+  animation-delay: -0.375s;
+}
+
+.hero .welcome span:nth-last-child(11n) {
+  animation-delay: -0.4125s;
+}
+
+.hero .welcome span:nth-last-child(12n) {
+  animation-delay: -0.45s;
+}
+
+.hero .welcome span:nth-last-child(13n) {
+  animation-delay: -0.4875s;
+}
+
+.hero .welcome span:nth-last-child(14n) {
+  animation-delay: -0.525s;
+}
+
+.hero .welcome span:nth-last-child(15n) {
+  animation-delay: -0.5625s;
+}
+
+.hero .welcome span:nth-last-child(16n) {
+  animation-delay: -0.6s;
 }
 
 .hero .arrow {
@@ -226,6 +278,11 @@ body {
 .hero .arrow a {
   text-decoration: none;
   color: white;
+  transition: all 150ms ease;
+}
+
+.hero .arrow a:hover {
+  color: #0b5ed7;
 }
 
 #propos {
