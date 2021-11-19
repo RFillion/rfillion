@@ -1,7 +1,7 @@
 {
     "jobs" : [
         {
-            "Titre" : "Équiterre (en cours)",
+            "Titre" : "Équiterre",
             "id" : "equiterre",
             "target" : "#equiterre",
             "Image" : "medias/equiterre.png",
