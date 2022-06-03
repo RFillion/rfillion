@@ -10,10 +10,9 @@
 
 html, body {width: 100%; height: 100vh;}
 
-section {width: 100%; height: 100%;}
+section {width: 100%; height: 100%; background: rgb(10, 10, 10)}
 
 .home {
-    background-color: rgb(10, 10, 10);
     display: grid;
     place-items: center;
     position: relative;

@@ -47,7 +47,9 @@ mobileNavItems.forEach(item => {
 
         gsap.fromTo(mobileNav, 
             {opacity: 1},
-            {opacity: 0, duration: .3, ease: 'expo.out'})
+            {opacity: 0, duration: .3, ease: 'expo.out', onComplete: () => {
+                mobileNav.style.visibility = 'hidden'
+            }})
         
         gsap.fromTo(toggleTop,
             {y: 2},
