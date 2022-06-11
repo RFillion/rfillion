@@ -17,12 +17,21 @@ mobileToggle.addEventListener('click', () => {
             {y: '100%', opacity: 0},
             {y: 0, opacity: 1, duration: 1, ease: 'expo.out'})
     
-        gsap.fromTo(toggleTop,
+        gsap.timeline()
+        .fromTo(toggleTop,
+            {width: '20px'},
+            {width: '30px', duration: .3, ease: 'expo.out'})
+        .fromTo(toggleTop,
             {y: -5},
-            {y: 2, duration: 1, ease: 'expo.out'})
-        gsap.fromTo(toggleBottom,
+            {y: 2, duration: .8, ease: 'expo.out'})
+        
+        gsap.timeline()
+        .fromTo(toggleBottom,
+            {width: '20px'},
+            {width: '30px', duration: .3, ease: 'expo.out'})
+        .fromTo(toggleBottom,
             {y: 5},
-            {y: -2, duration: 1, ease: 'expo.out'})
+            {y: -2, duration: .8, ease: 'expo.out'})
     } else {
         mobileToggle.classList.remove('active')
 
@@ -32,12 +41,20 @@ mobileToggle.addEventListener('click', () => {
                 mobileNav.style.visibility = 'hidden'
         }})
 
-        gsap.fromTo(toggleTop,
+        gsap.timeline()
+        .fromTo(toggleTop,
             {y: 2},
-            {y: -5, duration: 1, ease: 'expo.out'})
-        gsap.fromTo(toggleBottom,
+            {y: -5, duration: .8, ease: 'expo.out'})
+        .fromTo(toggleTop,
+            {width: '30px'},
+            {width: '20px', duration: .3, ease: 'expo.out'})
+        gsap.timeline()
+        .fromTo(toggleBottom,
             {y: -2},
-            {y: 5, duration: 1, ease: 'expo.out'})
+            {y: 5, duration: .8, ease: 'expo.out'})
+        .fromTo(toggleBottom,
+            {width: '30px'},
+            {width: '20px', duration: .3, ease: 'expo.out'})
     }
 })
 
@@ -51,12 +68,20 @@ mobileNavItems.forEach(item => {
                 mobileNav.style.visibility = 'hidden'
             }})
         
-        gsap.fromTo(toggleTop,
+        gsap.timeline()
+        .fromTo(toggleTop,
             {y: 2},
-            {y: -5, duration: 1, ease: 'expo.out'})
-        gsap.fromTo(toggleBottom,
+            {y: -5, duration: .8, ease: 'expo.out'})
+        .fromTo(toggleTop,
+            {width: '30px'},
+            {width: '20px', duration: .3, ease: 'expo.out'})
+        gsap.timeline()
+        .fromTo(toggleBottom,
             {y: -2},
-            {y: 5, duration: 1, ease: 'expo.out'})
+            {y: 5, duration: .8, ease: 'expo.out'})
+        .fromTo(toggleBottom,
+            {width: '30px'},
+            {width: '20px', duration: .3, ease: 'expo.out'})
         
     })
 })
