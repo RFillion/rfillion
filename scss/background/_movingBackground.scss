@@ -88,7 +88,7 @@
     }
     .circles.inverted {
         li {
-            animation: animateInverted 25s linear infinite;
+            animation: animateInverted 35s linear infinite;
             &:nth-child(1) {
                 animation-delay: 2s;
                 left: 25%;
@@ -160,7 +160,7 @@
 
 @keyframes animateInverted {
     0%{
-        transform: translateY(-1000px) rotate(0deg);
+        transform: translateY(-2000px) rotate(0deg);
         opacity: 1;
         border-radius: 0;
     }
