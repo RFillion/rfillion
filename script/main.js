@@ -106,3 +106,37 @@ mobileNavItems.forEach(item => {
 })
 
 
+// Get json file to make html
+fetch("json/project.json")
+    .then((response) => response.json())
+    .then((data) => createProject(data.projects))
+
+function createProject(projects) {
+    let createHTML = ''
+
+    projects.forEach((project, index) => {
+        let title = project.title
+        let desc = project.description
+        let tech = projects[index].technologies
+        let link = project.link
+        let url = project.img
+        let type = project.type
+
+        createHTML += `
+            <li class="project-item ${title}">
+                <div class="project-content">
+                    <p class="subtitle">${type}</p>
+                    <p class="title">${title}</p>
+                    <p class="desc">${desc}</p>
+                    <p class="list">${tech.join('  ')}</p>
+                </div>
+                <div class="project-image">
+                    <a href="#">
+                        <img src="${url}" alt="${title}">
+                    </a>
+                </div>
+            </li>
+        `
+        document.querySelector('.projectList').innerHTML = createHTML;
+    })
+}

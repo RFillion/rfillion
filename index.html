@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="medias/favicon-2.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./scss/style.scss">
   <title>Raphaël Fillion</title>
 </head>
@@ -33,7 +36,7 @@
       </nav>
       <div class="container-content">
         <p class="description">
-          Hello! I'm Raphaël Fillion, a Front-End developper that enjoys learning new stuff and creating good looking
+          Hello! I'm Raphaël Fillion, a Front-End Web Developper that enjoys learning new stuff and creating great
           websites and mobile applications.
         </p>
       </div>
@@ -67,27 +70,76 @@
   </section>
   <section class="about" id="about">
     <div class="container">
-      <h2>About me</h2>
-      <div class="description">
-        <div class="image">
-          <img src="medias/raph_blanko.JPG" alt="Moi" class="image--profile">
+      <div class="text">
+        <p class="text-title">About me</p>
+        <div class="text-desc">
+          <p>
+            Hey! My name is Raphaël Fillion and I love creating things for the internet. I started learning web development back in 2017 and loved it. Ever since that day, I have always pushed more to be a professional in this environment and build intuitive and responsive websites.  
+          </p>
+          <p>
+            Now that I'm out of school, I've dabbled in a few projects that have interested me, and I now know that app development is something I love to do.
+          </p>
+          <p>
+            Here are a few technologies I've been working with lately:
+          </p>
+          <div class="technologyList">
+            <ul>
+              <li>Twig</li>
+              <li>Javascript (ES6 +)</li>
+              <li>Node.js</li>
+            </ul>
+            <ul>
+              <li>Vue</li>
+              <li>VueX</li>
+              <li>Cordova</li>
+            </ul>
+          </div>
+          <p>
+            I'm also in the process of learning these technologies: 
+          </p>
+          <div class="technologyList">
+            <ul>
+              <li>React</li>
+            </ul>
+            <ul>
+              <li>Typescript</li>
+            </ul>
+          </div>
         </div>
-        <p class="texte">
-          Born in Canada, I've been dreaming of working in the tech industry since I was a child. Now that I've achieved this goal, I want to learn everything about web development, either it's Front-End or Back-End. I'm someone that is curious about a lot of topics and wants to learn the in's and out's of the world. 
-        </p>
+      </div>
+      <div class="img">
+        <img src="medias/raph_blanko.JPG">
       </div>
     </div>
   </section>
   <section class="projects" id="projects">
     <div class="container">
-      projects
+      <p class="title-project">Projects</p>
+      <ul class="projectList">
+        <!-- Ajouter à partir de l'api -->
+      </ul>
     </div>
   </section>
   <section class="contact" id="contact">
     <div class="container">
-      contact
+      <p class="title-contact">Contact</p>
+      <div class="email">
+        <p>Get in touch</p>
+        <a class="email-btn" href="mailto:info@rfillion.com">Say Hi!</a>
+      </div>
+      <div class="socials">
+        <a><svg><use xlink:href="medias/icons/symbols.svg#codepen"></use></svg></a>
+        <!-- <a><img src="medias/icons/github.svg"></a> -->
+        <a><img src="medias/icons/instagram.svg"></a>
+        <a><img src="medias/icons/twitter.svg"></a>
+        <a><img src="medias/icons/linkedin-in.svg"></a>
+        <a><img src="medias/icons/codepen.svg"></a>
+      </div>
     </div>
   </section>
+  <footer>
+    something
+  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
     integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
