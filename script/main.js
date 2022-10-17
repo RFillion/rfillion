@@ -1,87 +1,142 @@
-gsap.registerPlugin(ScrollTrigger);
+//Animation navigation
+let mobileToggle = document.querySelector('.mobile-toggle')
 
-//variables
-let Menu = document.getElementById('mobile-menu');
-let navBar = document.querySelector('.navbar');
-let Close = document.querySelector('.close');
-let NavMenu = document.querySelector('.navbar__menu');
-let links = document.querySelectorAll('.link');
-let arrow = document.querySelector('.arrow');
+let toggleTop = document.querySelector('.mobile-toggle .top')
+let toggleMiddle = document.querySelector('.mobile-toggle .midle')
+let toggleBottom = document.querySelector('.mobile-toggle .bottom')
 
-//bouton hamburger
-Menu.addEventListener('click', () => {
-    NavMenu.style.opacity = '1';
-    NavMenu.style.pointerEvents = 'all';
-});
+let mobileNav = document.querySelector('.mobileNav')
 
-Close.addEventListener('click', () => {
-    NavMenu.style.opacity = '0';
-    NavMenu.style.pointerEvents = 'none';
-});
+let homeContent = document.querySelector('.container-content')
 
-links.forEach(link => {
-    link.addEventListener('click', () => {
-        NavMenu.style.opacity = '0';
-        NavMenu.style.pointerEvents = 'none';
-    });
-});
+let mobileNavItems = document.querySelectorAll('.mobileNav--navigation-item')
 
-//animation GSAP
-gsap.timeline().to(arrow, 
-    {y: 20, ease: 'back.in', yoyo: true, repeat: -1});
+mobileToggle.addEventListener('click', () => {
+    if (!(mobileToggle.classList.contains('active'))) {
+        mobileToggle.classList.add('active')
+        mobileNav.style.visibility = 'visible'
 
-//scrolling
-window.onscroll = () => {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        navBar.style.background = "#1a1a1a";
+        gsap.timeline()
+            .fromTo(mobileNav,
+                { y: '100%', opacity: 0 },
+                { y: 0, opacity: 1, duration: 1, ease: 'expo.out' })
+            .fromTo(homeContent,
+                { opacity: 1 },
+                { opacity: 0, duration: .5, ease: 'expo.out' }, .05)
+
+        gsap.timeline()
+            .fromTo(toggleTop,
+                { width: '20px' },
+                { width: '30px', duration: .3, ease: 'expo.out' })
+            .fromTo(toggleTop,
+                { y: -5 },
+                { y: 2, duration: .8, ease: 'expo.out' })
+
+        gsap.timeline()
+            .fromTo(toggleBottom,
+                { width: '20px' },
+                { width: '30px', duration: .3, ease: 'expo.out' })
+            .fromTo(toggleBottom,
+                { y: 5 },
+                { y: -2, duration: .8, ease: 'expo.out' })
+    } else {
+        mobileToggle.classList.remove('active')
+
+        gsap.timeline()
+            .fromTo(mobileNav,
+                { y: 0, opacity: 1 },
+                {
+                    y: '100%', opacity: 0, duration: 1, ease: 'expo.out', onComplete: () => {
+                        mobileNav.style.visibility = 'hidden'
+                    }
+                })
+            .fromTo(homeContent,
+                { opacity: 0 },
+                { opacity: 1, duration: .5, ease: 'expo.out' }, .1)
+
+        gsap.timeline()
+            .fromTo(toggleTop,
+                { y: 2 },
+                { y: -5, duration: .8, ease: 'expo.out' })
+            .fromTo(toggleTop,
+                { width: '30px' },
+                { width: '20px', duration: .3, ease: 'expo.out' }, .3)
+        gsap.timeline()
+            .fromTo(toggleBottom,
+                { y: -2 },
+                { y: 5, duration: .8, ease: 'expo.out' })
+            .fromTo(toggleBottom,
+                { width: '30px' },
+                { width: '20px', duration: .3, ease: 'expo.out' }, .3)
     }
-    
+})
+
+mobileNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+        mobileToggle.classList.remove('active')
+
+        gsap.timeline()
+            .fromTo(mobileNav,
+                { opacity: 1 },
+                {
+                    opacity: 0, duration: .3, ease: 'expo.out', onComplete: () => {
+                        mobileNav.style.visibility = 'hidden'
+                    }
+                })
+            .fromTo(homeContent,
+                { opacity: 0 },
+                { opacity: 1, duration: .5, ease: 'expo.out' }, .05)
+
+        gsap.timeline()
+            .fromTo(toggleTop,
+                { y: 2 },
+                { y: -5, duration: .8, ease: 'expo.out' })
+            .fromTo(toggleTop,
+                { width: '30px' },
+                { width: '20px', duration: .3, ease: 'expo.out' })
+        gsap.timeline()
+            .fromTo(toggleBottom,
+                { y: -2 },
+                { y: 5, duration: .8, ease: 'expo.out' })
+            .fromTo(toggleBottom,
+                { width: '30px' },
+                { width: '20px', duration: .3, ease: 'expo.out' })
+
+    })
+})
+
+
+// Get json file to make html
+fetch("json/project.json")
+    .then((response) => response.json())
+    .then((data) => createProject(data.projects))
+
+function createProject(projects) {
+    let createHTML = ''
+
+    projects.forEach((project, index) => {
+        let title = project.title
+        let desc = project.description
+        let tech = projects[index].technologies
+        let link = project.link
+        let url = project.img
+        let type = project.type
+
+        createHTML += `
+            <li class="project-item ${title}">
+                <div class="project-content">
+                    <p class="subtitle">${type}</p>
+                    <p class="title" onclick="window.open('${link}')">${title}</p>
+                    <p class="desc">${desc}</p>
+                    <p class="list">${tech.join('  ')}</p>
+                </div>
+                <div class="project-image">
+                    <a href="${link}">
+                        <img src="${url}" alt="${title}">
+                    </a>
+                </div>
+            </li>
+        `
+        document.querySelector('.projectList').innerHTML = createHTML;
+    })
 }
-
-//Cartes
-fetch("job.json")
-.then(response => response.json())
-.then(result => {Cards(result)});
-
-function Cards(Info) {
-    let htmlCartes = '';
-    let htmlModal = '';
-
-    Info.jobs.forEach(job => {
-        let titre = job.Titre;
-        let target = job.target;
-        let id = job.id;
-        let image = job.Image;
-        let description = job.Description;
-        let lien = job.Lien;
-        let footer = document.querySelector(".footerTag");
-
-        htmlCartes += `<div class="col-12 col-lg-6 carte">
-            <div class="card">
-              <img src="${image}" class="card-img-top">
-              <div class="card-body">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="${target}">${titre}</button>
-              </div>
-            </div>
-          </div>`;
-          document.querySelector('.cartes').innerHTML = htmlCartes;
-
-          htmlModal += `<div class="modal fade" id="${id}" tabindex="-1">
-          <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="${image}">
-                <h3 class="modal-title" id="${id}">${titre}</h3>
-                <p>${description}</p>
-                <button type="button" class="btn btn-primary"><a href="${lien}" target="_blank">Voir le projet</a></button>
-              </div>
-            </div>
-          </div>
-        </div>`;
-        footer.insertAdjacentHTML('afterend', htmlModal);
-    });
-}
-
-
-
-
