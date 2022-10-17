@@ -227,6 +227,7 @@ html, body {width: 100%; height: 100vh; background: rgb(10, 10, 10); color: rgb(
 }
 
 .projects {
+    padding-top: 15px;
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -276,7 +277,16 @@ html, body {width: 100%; height: 100vh; background: rgb(10, 10, 10); color: rgb(
                     z-index: 2;
 
                     .subtitle {font-size: .75rem}
-                    .title {font-size: 1.5rem; font-weight: 600; margin-bottom: 10px;}
+                    .title {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        margin-bottom: 10px;
+                        cursor: pointer;
+                        transition: all 150ms ease;
+                        &:hover {
+                            color: white;
+                        }
+                    }
                     .desc {
                         font-size: 1rem; margin-bottom: 10px;
                         .project-link {
@@ -306,11 +316,28 @@ html, body {width: 100%; height: 100vh; background: rgb(10, 10, 10); color: rgb(
                     grid-area: 1 / 6 / -1 / -1;
                     width: 100%; height: 100%;
                     a {
-                        
                         text-decoration: none;
                         width: 100%; height: 100%;
-                        img {width: 100%; opacity: .3; height: 100%;object-fit: cover;}
+                        position: relative;
+                        img {
+                            width: 100%;
+                            opacity: .3;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: all 150ms ease
+                        }
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            inset: 0;
+                            background-color: transparent;
+                            z-index: 10;
+                        }
+                        &:hover img {
+                            opacity: 1;
+                        }
                     }
+
                 }
 
                 @media (min-width: 767px) {
@@ -360,7 +387,7 @@ html, body {width: 100%; height: 100vh; background: rgb(10, 10, 10); color: rgb(
         .email {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
             gap: 10px;
             p {font-size: 1.1rem; font-weight: 400;}
 
@@ -377,17 +404,79 @@ html, body {width: 100%; height: 100vh; background: rgb(10, 10, 10); color: rgb(
                     color:rgb(10, 10, 10);
                 }
             }
+            @media (min-width: 767px) {
+                margin-top: 50px;
+            }
         }
         .socials {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             justify-items: center;
-            margin-top: 20px;
+            margin-top: 50px;
             a {
-                width: 25px; 
-                svg {width: 100%; height: 25px; fill: rgb(180, 180, 180);}
+                width: 25px;
+                svg {width: 100%; height: 25px; fill: rgb(180, 180, 180); transition: all 150ms ease;}
+
+                &:hover svg {fill: white}
+            }
+            
+            
+            @media (min-width: 767px) {
+                position: fixed;
+                bottom: 0; left: 90px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                height: 200px;
+                flex-direction: column;
+                z-index: 999;
+
+                &::after {
+                    content: '';
+                    height: 100px;
+                    width: 1px;
+                    background-color: rgb(180 180 180);
+                }
+            }
+        }
+        .email-socials {
+            display: none;
+        }
+        @media (min-width: 767px) {
+            min-height: 250px;
+            .email-socials {
+                position: fixed;
+                bottom: 80px; right: -25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(180 180 180);
+                text-decoration: none;
+                font-family: 'fira code', monospace;
+                gap: 10px;
+                width: 250px;
+                rotate: 90deg;
+                z-index: 999;
+                transition: all 150ms ease;
+
+                &::after {
+                    content: '';
+                    height: 1px;
+                    width: 100px;
+                    background-color: rgb(180 180 180);
+
+                }
+
+                &:hover {color: white;}
             }
         }
     }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    color: rgb(180 180 180 / 0.2)
 }
 

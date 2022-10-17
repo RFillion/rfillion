@@ -126,12 +126,12 @@ function createProject(projects) {
             <li class="project-item ${title}">
                 <div class="project-content">
                     <p class="subtitle">${type}</p>
-                    <p class="title">${title}</p>
+                    <p class="title" onclick="window.open('${link}')">${title}</p>
                     <p class="desc">${desc}</p>
                     <p class="list">${tech.join('  ')}</p>
                 </div>
                 <div class="project-image">
-                    <a href="#">
+                    <a href="${link}">
                         <img src="${url}" alt="${title}">
                     </a>
                 </div>
