@@ -1,14 +1,6 @@
 {
   "projects": [
     {
-      "title": "Terego - Blanko",
-      "description": "Terego is a project of a mother and daughter passionate about camping and agrotourism! I've done this project with the supervision of <a class=\"project-link\" href=\"https://blanko.ca/fr\" target=\"_blank\">Blanko</a>. <br/><br/> Available on iOS and Android.",
-      "technologies": [ "Vue", "VueX", "Cordova" ],
-      "link": "#",
-      "img": "assets/terego.png",
-      "type": "App"
-    },
-    {
       "title": "Cyberimpact",
       "description": "In my first internship, I was asked to create a Q&A page for their software.",
       "technologies": ["HTML", "SCSS", "Javascript"],
